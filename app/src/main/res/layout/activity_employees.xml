@@ -1,0 +1,74 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/etSearchCountry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:hint="Search Country here"
+        android:fontFamily="serif"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="18dp"
+        android:layout_gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/mFragment1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#CDDC39"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/mFragment2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etSearchCountry"
+        />
+
+
+
+
+
+          <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/mFragment2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+              android:background="#4CAF50"
+              android:layout_marginBottom="10dp"
+              app:layout_constraintEnd_toStartOf="@+id/mFragment3"
+              app:layout_constraintStart_toEndOf="@+id/mFragment1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etSearchCountry"
+        />
+
+
+    <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/mFragment3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+        android:background="#FF9E96"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/mFragment2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etSearchCountry"
+        />
+
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
